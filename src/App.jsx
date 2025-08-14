@@ -6,20 +6,9 @@ import './App.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div class='header'>
-        <div>
-          <ul class="navButtons">
-            <li>HOME</li>
-            <li>DOMAIN__EXPANSION</li>
-            <li>HVDES:~ touch<any id="blinking">_</any></li>
-          </ul>
-        </div>
-
-      </div>
+    
     </>
   )
 
