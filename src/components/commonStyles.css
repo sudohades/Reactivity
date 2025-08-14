@@ -1,0 +1,51 @@
+/* This Section serves as the navbar's styling*/
+
+.header{
+    background-color: #021155;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    max-width: 100vw;
+}
+.navButtons{
+    color:yellow;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0 20px;
+    list-style: none;
+    top: 0px;
+}
+#blinking{
+    color: blueviolet;
+    animation: blinking-animation 1s steps(5, start) infinite;
+}
+/* This Section serves as the switchCard styling*/
+
+.carousel-card{
+    width:180px;
+    height: 280px;
+    border-radius: 8px;
+    background: lightgray;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+    transition: box-shadow 0.3s;
+}
+.carousel-card:hover{
+    box-shadow: 0 0 10px 2px #4f40ff, 0 0 20px4px #5e35be, 0 0 30px 6px #38125c
+}
+.carousel-container{
+    display: flex;
+}
+
+
+
+@keyframes blinking-animation {
+    to {
+        visibility: hidden;
+    }
+}
