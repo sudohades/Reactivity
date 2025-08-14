@@ -1,0 +1,11 @@
+.header{
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.navButtons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
