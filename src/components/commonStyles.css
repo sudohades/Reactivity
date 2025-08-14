@@ -27,6 +27,8 @@
     width:180px;
     height: 280px;
     border-radius: 8px;
+    position: absolute;
+    transform-origin: 50% 50%;
     background: lightgray;
     color: #222;
     display: flex;
@@ -40,6 +42,8 @@
 }
 .carousel-container{
     display: flex;
+    position: relative;
+    transform-origin: 0 100%;
 }
 
 
