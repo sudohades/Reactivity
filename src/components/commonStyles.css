@@ -22,28 +22,39 @@
     animation: blinking-animation 1s steps(5, start) infinite;
 }
 /* This Section serves as the switchCard styling*/
+.carousel-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 80%;
+}
+.carousel-container:hover{
+    transform: scale(1.02);
+}
 
 .carousel-card{
-    width:180px;
+    flex: 1 1 18vw;
+    min-width: 80px;
+    max-width: 210px;
     height: 280px;
     border-radius: 8px;
-    position: absolute;
+    position: relative;
     transform-origin: 50% 50%;
     background: lightgray;
     color: #222;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     margin: 8px;
     transition: box-shadow 0.3s;
 }
 .carousel-card:hover{
-    box-shadow: 0 0 10px 2px #4f40ff, 0 0 20px4px #5e35be, 0 0 30px 6px #38125c
-}
-.carousel-container{
-    display: flex;
-    position: relative;
-    transform-origin: 0 100%;
+    box-shadow: 0 0 10px 2px #4f40ff, 0 0 20px 4px #5e35be, 0 0 30px 6px #38125c
 }
 
 

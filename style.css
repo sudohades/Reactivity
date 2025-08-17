@@ -6,3 +6,8 @@
     border-bottom: 1px solid #eee;
     z-index: 1000;
 }
+#card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
