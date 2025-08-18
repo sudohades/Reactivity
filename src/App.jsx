@@ -1,5 +1,10 @@
 import { useState } from 'react'
 import './App.css'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import SwitchCards from './components/SwitchCards'
+import { Route, Routes } from 'react-router-dom'
+
 
 
 
@@ -7,10 +12,11 @@ import './App.css'
 function App() {
   return (
     <>
-    <div className="hero">
-      <h1> J E S S E</h1>
-      <h2>WELCOME TO MY DOMAIN</h2>
-    </div>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/domain" element={<SwitchCards />} />
+    </Routes>
     </>
   )
 

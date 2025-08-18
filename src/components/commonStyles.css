@@ -16,10 +16,20 @@
     padding: 0 20px;
     list-style: none;
     top: 0px;
+    font-family: 'Smooch sans variable', sans-serif;
+    font-size: 22px;
 }
 #blinking{
     color: blueviolet;
     animation: blinking-animation 1s steps(5, start) infinite;
+}
+
+.hero{
+    background: linear-gradient(to right, #021155, #4f40ff);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Smooch sans variable', sans-serif;
 }
 /* This Section serves as the switchCard styling*/
 .carousel-container{
@@ -27,22 +37,21 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
     transform-origin: 50% 50%;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 80%;
+    width: 100%;
 }
 .carousel-container:hover{
     transform: scale(1.02);
 }
 
 .carousel-card{
-    flex: 1 1 18vw;
-    min-width: 80px;
-    max-width: 210px;
+    flex: 1 1 0;
+    min-width: 5%;
     height: 280px;
     border-radius: 8px;
-    position: relative;
     transform-origin: 50% 50%;
     background: lightgray;
     color: #222;
@@ -63,4 +72,10 @@
     to {
         visibility: hidden;
     }
+}
+@font-face {
+    font-family:'Smooch sans variable';
+    src: url('../assets/SmoochSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
 }
