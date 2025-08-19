@@ -1,5 +1,8 @@
 import React from 'react'
+import { useState } from 'react';
 import './commonStyles.css'
+import { motion } from 'framer-motion';
+
 
 const card =  [
     {id: 1, title: "Linux news"},
@@ -12,14 +15,31 @@ const card =  [
 function Card({ title }){
     return <div className="carousel-card">{title}</div>
 }
+
 function SwitchCards() {
-    return (
-    <div className="carousel-container">
-        {card.map((card,idx) =>(
-            <Card key={card.id} title={card.title} z-index={idx}/>
-        ))}
-        </div>
-    )
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div className="carousel-container" onClick={() => setExpanded(!expanded)}>
+      {card.map((card, idx) => (
+        <motion.div
+          key={card.id}
+          className="carousel-card"
+          initial={false}
+          animate={{
+            x: expanded ? idx * 100 + '%' : 0,
+            opacity: expanded || idx === 0 ? 1 : 0,
+            zIndex: expanded ? 1 : card.length - idx,
+            position: 'absolute',
+            left: 0,
+            top: 0,
+          }}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+        >
+          {card.title}
+        </motion.div>
+      ))}
+    </div>
+  );
 }
 
 
