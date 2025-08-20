@@ -1,0 +1,24 @@
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgb(54, 51, 51);
+    color: rgb(189, 181, 181);
+}
+.desktop-menu{
+    display: none;
+}
+.mobile-menu-icon{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+@media (min-width:768px){
+    .desktop-menu{
+        display: block;
+    }
+    .mobile-menu-icon{
+        display: none;
+    }
+}

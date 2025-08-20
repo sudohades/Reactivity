@@ -1,0 +1,10 @@
+.desktop-links{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.desktop-links li{
+    cursor: pointer;
+    
+}
