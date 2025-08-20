@@ -14,18 +14,22 @@ function App() {
   return (
     <>
       <Navbar />
-      <Layout>
-        <NavBar />
+      <NavBar />
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-            <Route path="domain" element={<SwitchCards />} />
-            <Route path="profile" element={<UserProfile />} />
-          </Route>
+          <Route
+           path="/" 
+           element={
+           <>
+               <Home />
+               <HomePage />
+           </>
+           }
+          />
+            <Route path="/domain" element={<SwitchCards />} />
+            <Route path="/profile" element={<UserProfile />} />
+          
         </Routes>
-        <HomePage />
         <Footer />
-      </Layout>
     </>
   )
 

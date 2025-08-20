@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Home, User, Info } from 'lucide-react';
+import './commonStyles.css';
 
 // Navigation component
 const NavBar = ({ currentPage, onNavigate }) => {
