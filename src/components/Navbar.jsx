@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import SwitchCards from './SwitchCards'
 import App from '../App'
+import Layout from './Layout'
 
 function Navbar(){
     return (
