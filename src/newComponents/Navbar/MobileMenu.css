@@ -1,16 +1,68 @@
-.mobile-menu{
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: rgb(54, 51, 51);
-    color: rgb(189, 181, 181);
-    width: 200px;
-    padding: 1rem;
+:root{
+    --drawer-w:280px;
+    --menu-duration: 0.3s;
+    --menu-ease: cubic-bezier(.22, .61, .36, 1);
+    --stagger-gap: 60ms;
+    --slide-distance: 10px;
 }
 
-.mobile-menu ul{
+/* drawer container*/
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: var(--drawer-w);
+    height: 100dvh;
+    background: rgb(54, 51, 51);
+    color: rgb(189, 181, 181);
+    padding: calc(var(--nav-h) + 0.5rem) 1.25rem 1.25rem;
+    transform: translateX(100%);
+    transition: transform var(--menu-duration) var(--menu-ease);
+    will-change: transform;
+    z-index: 60;
+    box-shadow: -12px 0 24px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu.open{
+    transform:translateX(0);
+}
+
+/* Link ist*/
+.mobile-links{
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1rem;
+    padding: 0px;
+    margin: 0px;
+}
+.mobile-link a{
+    list-style:none;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    color: #e9e9e9;
+    font-weight: 600;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(var(--slide-distance));
+}
+
+/* slide/fade in animations on loading menu*/
+.mobile-menu.open .mobile-link a{
+    animation: linkIn 360ms var(--menu-ease) forwards;
+    animation-delay: calc(var(--i) * var(--stagger-gap));
+}
+
+@keyframes linkIn {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*reduced motion in case*/
+@media (prefers-reduced-motion:reduce){
+    .mobile-menu{ transition: none; }
+    .mobile-menu.open .mobile-link a {
+        animation: none; opacity: 1; transform: none; 
+    }
 }

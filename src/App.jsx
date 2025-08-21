@@ -1,11 +1,12 @@
+import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './newComponents/Navbar/Navbar';
-import Home from './newComponents/Focus/Home';
 import Blog from './newComponents/Focus/Blog';
 import Contact from './newComponents/Focus/Contact';
 import Home3 from './pages/Home3';
+import HomePage from './pages/Home2';
 
 function App() {
   return (
