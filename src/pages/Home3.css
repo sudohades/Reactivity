@@ -1,0 +1,91 @@
+.homepage3 {
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #222, #444);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.explore-button {
+  background: #00adb5;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.explore-button:hover {
+  background: #008891;
+}
+
+/* Blog Preview Section */
+.blogPreview {
+  padding: 3rem 2rem;
+}
+
+.blogPreview h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blogCards {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.blogCards h3 {
+  margin-bottom: 0.5rem;
+}
+
+.blogCards p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.blogCards a {
+  color: #00adb5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blogCards a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .blog-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
