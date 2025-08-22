@@ -2,7 +2,6 @@ import React, {useEffect, useState, useCallback} from "react";
 import "./Navbar.css"
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
-import { div } from "framer-motion/client";
 
 const Navbar = () => {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -27,15 +26,16 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="logo">JESSE-2.0 </div>
-            <div className="desktopMenu">
+            <div className="desktop-menu">
                 <DesktopMenu />
             </div>
-            <div className={`hamburger ${isMobileOpen ? "is-active" : ""}`} onClick={(toggleMenu)}>
+            <button className={`hamburger ${isMobileOpen ? "is-active" : ""}`} onClick={(toggleMenu)}>
                { /* Place some icon here for the menu*/}
                <span className="bar"/>
                <span className="bar"/>
                <span className="bar"/>
-            </div>
+            </button>
+            <MobileMenu open={isMobileOpen} onClose={closeMenu} />
             {isMobileOpen && <div className="backdrop" onClick={closeMenu} aria-hidden="true"/>}
         </nav>
     );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Shield, User, AlertCircle, Loader } from 'lucide-react';
-import useApi from '../hooks/useApi';
+import useApi from '../../hooks/useApi';
 
 // User Profile Component with Login
 const UserProfile = () => {

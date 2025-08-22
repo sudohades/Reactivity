@@ -35,7 +35,7 @@
                             Get comfortable on the terminal with these essential commands every beginner should know.
                         </p>
                     </article>
-                    <article>
+                    <article className="blogCards">
                         <h3>
                             Customizing Your Linux Environment
                         </h3>

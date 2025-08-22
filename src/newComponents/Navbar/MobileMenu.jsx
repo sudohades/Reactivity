@@ -1,6 +1,6 @@
 import React from "react";
 import "./MobileMenu.css";
-import { aside } from "framer-motion/client";
+
 
 const links = [
     {href:"#", label:"Home"},
@@ -13,15 +13,15 @@ const MobileMenu = ({open, onClose}) => {
    return(
     <aside className={`mobile-menu ${open ? "open" : ""}`} aria-hidden={!open}>
          <nav>
-        <ul className="mobile-links">
-          {links.map((l, i) => (
-            <li className="mobile-link" style={{ "--i": i }} key={l.label}>
-              <a href={l.href} onClick={onClose}>{l.label}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      </aside>
+            <ul className="mobile-links">
+                {links.map((l, i) => (
+                    <li className="mobile-link" style={{ "--i": i }} key={l.label}>
+                        <a href={l.href} onClick={onClose}>{l.label}</a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    </aside>
    );
 };
 export default MobileMenu;

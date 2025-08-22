@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './newComponents/Navbar/Navbar';
 import Blog from './newComponents/Focus/Blog';
 import Contact from './newComponents/Focus/Contact';
-import Home3 from './pages/Home3';
+import Home3 from './newComponents/Focus/Home3';
 import HomePage from './pages/Home2';
 
 function App() {
