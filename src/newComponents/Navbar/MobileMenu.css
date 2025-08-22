@@ -4,31 +4,41 @@
     --menu-ease: cubic-bezier(.22, .61, .36, 1);
     --stagger-gap: 60ms;
     --slide-distance: 10px;
+    --nav-h: 64px;
 }
 
 /* drawer container*/
 .mobile-menu{
     position: fixed;
-    top: 0;
-    right: 0;
+    top: calc(var(--nav-h) + 50px);
+    right: 40px;
     width: var(--drawer-w);
-    height: 100dvh;
+    height: 250px;
     background: rgb(54, 51, 51);
     color: rgb(189, 181, 181);
-    padding: calc(var(--nav-h) + 0.5rem) 1.25rem 1.25rem;
-    transform: translateX(100%);
+    padding: 1.25rem 1.25rem;
     transition: transform var(--menu-duration) var(--menu-ease);
     will-change: transform;
     z-index: 60;
-    box-shadow: -12px 0 24px rgba(0, 0, 0, 0.3);
+    box-shadow: -4px 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateX(calc(100% + 50px));
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mobile-menu.open{
     transform:translateX(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Link ist*/
+
+/* Link list*/
 .mobile-links{
+    margin-top: 0;
     list-style: none;
     display: grid;
     gap: 1rem;

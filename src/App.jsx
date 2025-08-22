@@ -6,7 +6,7 @@ import Navbar from './newComponents/Navbar/Navbar';
 import Blog from './newComponents/Focus/Blog';
 import Contact from './newComponents/Focus/Contact';
 import Home3 from './newComponents/Focus/Home3';
-import HomePage from './pages/Home2';
+import HomePage from './newComponents/Focus/Home2';
 
 function App() {
   return (
