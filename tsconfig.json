@@ -1,0 +1,14 @@
+    {
+      "compilerOptions": {
+        "target": "es2020", // Or a higher target like "esnext"
+        "module": "esnext", // Or "commonjs" depending on your module system
+        "jsx": "react-jsx", // Or "react"
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true
+      },
+      "include": ["src/**/*.ts", "src/**/*.tsx"],
+      "exclude": ["node_modules"]
+    }

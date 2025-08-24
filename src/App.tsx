@@ -1,17 +1,14 @@
 import React from 'react';
-import { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Navbar from './newComponents/Navbar/Navbar';
 import Blog from './newComponents/Focus/Blog';
 import Contact from './newComponents/Focus/Contact';
 import Home3 from './newComponents/Focus/Home3';
-import HomePage from './newComponents/Focus/Home2';
 
 function App() {
   return (
-    <>
-    <div className="app">
+    <>      <div className="app">
         <Navbar />
         <Routes>
           <Route path='/' element={<Home3 />} />
@@ -19,7 +16,8 @@ function App() {
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </div>
-    </>
+      </>
+
   );
 
 };

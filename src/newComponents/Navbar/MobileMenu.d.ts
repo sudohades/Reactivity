@@ -3,10 +3,10 @@ import "./MobileMenu.css";
 
 
 const links = [
-    {href:"/", label:"Home"},
-    {href:"/blog", label:"Blog"},
-    {href:"/contact", label:"Contact"},
-    {href:"/login", label:"Login"},
+    {href:"#", label:"Home"},
+    {href:"#", label:"Blog"},
+    {href:"#", label:"Contact"},
+    {href:"#", label:"Login"},
 ]
 
 const MobileMenu = ({open, onClose}) => {
