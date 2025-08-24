@@ -31,12 +31,12 @@ const Blog = () => {
 
     return (
         <div className="carousel">
-            <button onClick={prevSlide} className="carousel-btn"> Prev </button>
-                <div>
+            <button onClick={prevSlide} className="carousel-btn" id="prev"> Prev </button>
+                <div className="carousel-card">
                     <Link to={cards[currentIndex].url}>{cards[currentIndex].title}</Link>
                 </div>
 
-            <button onClick={nextSlide} className="carousel-btn"> Next </button>
+            <button onClick={nextSlide} className="carousel-btn" id="next"> Next </button>
 
         </div>
         

@@ -1,18 +1,23 @@
 .carousel {
     display:flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    max-width: 400px;
+    justify-content:space-between;
+    width: 80vw;
+    height: 40vh;
+    max-width: 800px;
+    border-radius: 12px;
     gap: 1rem;
     overflow: hidden;
     border: 1px solid #ccc;
     position: relative;
-
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .carousel-btn {
     background: #333;
+    height: 50px;
+    margin:0 10px;
     color: #ccc;
     border: none;
     padding: 0.75rem 1rem;
@@ -21,10 +26,33 @@
     font-size: 1.5rem;
 }
 
+#prev{
+    position: relative;
+    top: 10px;
+}
+
+#next{
+    position: relative;
+    top: 317px;
+}
+
 .carousel-card {
+    position :absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     flex: 1;
     text-align: center;
-    padding: 2rem;
+    text-justify: center;
+    padding: 0;
     background: #444;
     color: #ccc;
-    border-radius: 12px;}
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border-radius: 12px;
+    z-index: -1;
+}
+
