@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./Blog.css";
 import { useState} from 'react';
 import { Link } from 'react-router-dom'
+import CanvasComponent from './Canvas';
 
 const cards =[
     {id: 1, title: "Card 1", url: "/blog/file1"},
@@ -20,6 +21,29 @@ const Blog = () => {
     //keeping track of which card is visible
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const animations = [
+        {//animation 1
+            },
+        {//animation 2
+            },
+        {//animation 3
+            },
+        {//animation 4
+            },
+        {//animation 5
+            }
+
+    ]
+
+    function iterateAnimations(){
+        //hold current animation
+        //hold next animation
+        //logic to determine next animation
+    }
+
+    
+
+
     //navigation for back and forth functions
     const prevSlide = () => {
         setCurrentIndex((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
@@ -31,13 +55,16 @@ const Blog = () => {
 
     return (
         <div className="carousel">
-            <button onClick={prevSlide} className="carousel-btn" id="prev"> Prev </button>
+                <button onClick={prevSlide} className="carousel-btn" id="prev"> Prev </button>
+
                 <div className="carousel-card">
                     <Link to={cards[currentIndex].url}>{cards[currentIndex].title}</Link>
+                    {/* <CanvasComponent animation = {animations[currentIndex]} /> */}
                 </div>
+                <button onClick={nextSlide} className="carousel-btn" id="next"> Next </button>
 
-            <button onClick={nextSlide} className="carousel-btn" id="next"> Next </button>
 
+            
         </div>
         
     );
